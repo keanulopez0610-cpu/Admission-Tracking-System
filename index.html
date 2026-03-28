@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>PUP Admission System</title>
+</head>
+
+    <div id="welcome-screen">
+        <nav class="top-nav">
+            <div class="logo-section">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/PUP.png" alt="PUP Logo" class="pup-logo">
+                <div class="school-name">
+                    <span class="main-name">Polytechnic University of the Philippines</span>
+                    <span class="sub-name">The Country's 1st PolytechnicU</span>
+                </div>
+            </div>
+            <button class="nav-login-btn" onclick="openLogin()">LOGIN</button>
+        </nav>
+
+        <div class="welcome-text">
+            <h1>Welcome to Admission Tracking System</h1>
+        </div>
+    </div>
+
+    <div id="login-modal" class="modal">
+    <div class="login-box">
+
+        <div class="login-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/PUP.png" class="login-logo">
+            <h2>Please Sign in</h2>
+        </div>
+
+        <input type="text" id="user" placeholder="Admission ID">
+        <input type="password" id="pass" placeholder="Password">
+
+        <button type="button" onclick="showDashboard()">LOGIN</button>
+        <button type="button" class="cancel-btn" onclick="closeLogin()">Cancel</button>
+
+    </div>
+</div>
+
+<div id="timeout-screen" class="timeout-screen" style="display:none;">
+    
+    <div class="timeout-box">
+
+        <div class="circle-loader"></div>
+
+        <div class="timeout-text">
+            <h2>Session Timeout</h2>
+            <p id="countdown">3:00</p>
+        </div>
+
+    </div>
+
+</div>
+    <div id="dashboard-section" style="display: none;">
+        <div class="dashboard-layout">
+            <div class="sidebar">
+                <h3>MENU</h3>
+                <ul>
+                    <li>Dashboard</li>
+                    <li>Applicants</li>
+                    <li onclick="location.reload()" style="color:white;">Logout</li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h1>Admission Dashboard</h1>
+                <div class="card">
+                    <h3>150</h3>
+                    <p>Total Student Applicants</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
